@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>寺库-注册</title>
+	<link rel="shortcut icon" href="bitbug_favicon.ico" />
+</head>
+<style type="text/css">
+		*{
+		margin: 0;
+		padding: 0;
+		}
+	#header{
+		width: 100%;
+		height: 70px;
+		background: rgba(0,0,0,0.8);
+		display: flex;
+		justify-content: space-between;
+	}
+	#header img{
+		margin-left: 75px;
+	}
+	#header a{
+		line-height: 70px;
+		color:#999;
+		text-decoration: none;
+		font-size: 12px;
+		margin-right: 15px;
+	}
+	#header a:hover{
+		color:orange;
+	}
+	#header #headercontent{
+		margin-right: 60px;
+	}
+	#content{
+		background-color: #fdf8f4;
+		width: 100%;
+		height: 600px;
+		position: relative;
+	}
+	#content img{
+		margin-left: 100px;
+		margin-top: 50px;
+	}
+	#reg{
+		width: 270px;
+		height: 370px;
+		background-color: white;
+		position: absolute;
+		left: 800px;
+		top: 70px;
+		padding-top: 30px;
+		padding-left: 30px;
+	}
+	#reg #username{
+		font-size: 14px;
+		color: #666;
+	}
+	#reg #userpass{
+		font-size: 14px;
+		color: #666;
+	}
+	#reg #repeatpass{
+		font-size: 14px;
+		color: #666;
+	}
+	#reg input{
+		width: 230px;
+		height: 30px;
+		margin-top: 5px;
+		outline-color: red;
+	}
+	#secondline{
+		margin-top: 10px;
+	}
+	#threeline{
+		margin-top: 10px;
+	}
+	#checkbox{
+		margin-top: 10px;
+	}
+	#checkbox #check{
+			width: 15px;
+			height: 15px;
+	}
+	#hidebox{
+		display: none;
+	}
+	#sub{
+		color:white;
+		background-color: orange;
+		border:1px solid orange;
+		cursor: pointer;
+	}
+	#gouxuan{
+		font-size: 12px;
+		color: #666;
+	}
+	#last{
+		margin-top: 20px;
+		display: block;
+		font-size: 14px;
+		color: #666;
+	}
+	#gologin{
+		text-decoration: none;
+		color:orange;
+		float: right;
+		margin-top: -20px;
+		margin-right: 80px;
+		font-size: 14px;
+	}
+	#bigbox{
+		display: flex;
+		width: 230px;
+	}
+		#pass_strong1{
+		width: 77px;
+		height: 5px;
+	}
+		#pass_strong2{
+		width: 77px;
+		height: 5px;
+	}
+		#pass_strong3{
+		width: 77px;
+		height: 5px;
+	}
+</style>
+<body>
+<div id="header">
+		<img src="img/siku.png">
+		<div id="headercontent">
+		<a href="index.html">寺库首页</a>
+		<a href="#">收藏寺库</a>
+		<a href="#">寺库APP</a>
+	</div>
+</div>
+<div id="content">
+	<img src="img/bgimg.jpg">
+	<div id="reg">
+		<div id="firstline">
+		<span id="username">用户名</span><span id="idspan"></span><br/>
+		<input id="txtnum" type="text" name="userid" style="font-size: 20px;"><br/>
+		<span id="boxcon"></span>
+		</div>
+		<div id="secondline">
+		<span id="userpass">密码</span><br/>
+		<input type="password" id="pwd" name="userpass" style="font-size: 20px;">
+		<div id="bigbox"><div id="pass_strong1"></div><div id="pass_strong2"></div><div id="pass_strong3"></div></div>	
+		</div>
+		<div id="threeline">
+		<span id="repeatpass">确认密码</span><br/>
+		<input id="repeatinput" type="password" name="userpass2" style="font-size: 20px;">
+		<div id="repeathtml" style="color: red"></div>	
+		</div>
+		<div id="checkbox">
+			<input id="check"  type="checkbox"><span style="color:#666;">贵宾邀请码</span>
+			<input id="hidebox" type="text" style="font-size: 20px">
+		</div>
+		<input id="sub" type="button" value="立即注册" style="height: 40px;width:237px"><br/>
+		<span id="subdown" style="color: red"></span><br/>
+		<input type="checkbox" style="width: 15px;height: 15px;margin-top: 10px"><span id="gouxuan">我已阅读并同意《寺库网用户注册协议》</span><br/>
+		<span id="last">已经是寺库会员？</span><a id="gologin" href="login.html">立即登录</a>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+								$("#check").click(function(){
+					if($("#check").attr("checked")=="checked"){
+				$("#hidebox").css({"display":"block"});
+				}
+					if($("#check").attr("checked")!="checked"){
+					$("#hidebox").css({"display":"none"});
+				}					
+				})
+			});
+
+
+				$(window).keydown(function(){
+					$("#bigbox").css({"border":"1px solid black"});
+					var pwd = $("#pwd").val();
+					var repeatpass = $("#repeatpass").val();
+					var box1 = $("#pass_strong1");
+					var box2 = $("#pass_strong2");
+					var box3 = $("#pass_strong3");
+							if(pwd.length<=5){
+								$("#pass_strong1").css({"background-color":"yellow"});
+								$("#pass_strong2").css({"background-color":"white"});
+							}
+							if(pwd.length>5 && pwd.length<10){
+								$("#pass_strong2").css({"background-color":"skyblue"});
+								$("#pass_strong1").css({"background-color":""});
+								$("#pass_strong3").css({"background-color":"white"});
+							}
+							if(pwd.length>11){
+								$("#pass_strong3").css({"background-color":"red"});
+								$("#pass_strong2").css({"background-color":""});
+							}
+							if(pwd.length==""){
+								$("#pass_strong1").css({"background-color":"white"});
+								$("#pass_strong2").css({"background-color":"white"});
+								$("#pass_strong3").css({"background-color":"white"});
+								$("#bigbox").css({"border":"none"});
+							}
+
+				})
+
+			$("#repeatinput").blur(function(){
+				var pwd = $("#pwd").val();
+				var repeatinput = $("#repeatinput").val();
+				if(repeatinput!=pwd){
+					$("#repeathtml").html("两次密码输入不一致");
+					$("#sub").css({"background-color":"gray","border":"gray"})
+					$("#repeatinput").val("");
+				}else{ 
+					$("#sub").css({"background-color":"orange","border":"orange"})
+					$("#repeathtml").html("");
+				}  
+			})	
+
+			$("#txtnum").blur(function(){
+				$.post("php/siku_reg0.php",{userId:$("#txtnum").val()},function(date){
+					if(date=="1"){
+						$("#boxcon").html("用户名已被注册").css({"color":"red"});
+					}else{
+						$("#boxcon").html("用户名注册成功！").css({"color":"black"});
+					}
+				})
+
+			})
+
+						$("#sub").click(function(){
+
+						$.post("php/siku_reg.php",{userId:$("#txtnum").val(),userPass:$("#pwd").val()},function(data){
+								if(data=="1"){
+									location.href="login.html";
+								}else{
+									$("#subdown").html("注册失败");
+								}
+						})
+			})
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">	
+				*{
+		margin: 0;
+		padding: 0;
+		}
+		body{
+			background-color: #ededed;
+		}
+	#header{
+		width: 100%;
+		height: 70px;
+		background: rgba(0,0,0,0.8);
+		display: flex;
+		justify-content: space-between;
+	}
+	#header .logo{
+		margin-left: 250px;
+	}
+	#gotop{
+		width: 60px;
+		height: 60px;
+		background-color: red;
+		border-radius: 50%;
+		text-align: center;
+		font-family: Arial;
+		font-weight: 900;
+		font-style: italic;
+		cursor: pointer;
+		position: fixed;
+		left: 1280px;
+		top: 565px;
+	}
+	#godingbu{
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<img class="logo" src="img/siku.png">
+		<div id="headercontent">
+			<img src="img/c_05.jpg" style="margin-right: 200px">
+		</div>
+</div>
+<div id="gotop" style="display: none">
+	<span id="top" style="line-height: 60px;">TOP</span>
+	<span id="godingbu" style="font-size: 14px;line-height: 14px">回到<br>顶部</span>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+			$(document).ready(function(){
+				$("#gotop").mouseover(function(){
+					$("#top").css({"display":"none"});
+					$("#godingbu").css({"display":"block","padding-top":"20px"});
+				})
+					$("#gotop").mouseout(function(){
+					$("#top").css({"display":"block"});
+					$("#godingbu").css({"display":"none"});
+				})
+				});
+
+				$(window).scroll(function(){
+					if($(window).scrollTop()>100){
+						$("#gotop").fadeIn(500);
+					}else{
+						$("#gotop").fadeOut(500);
+					}
+				});
+				$("#godingbu").on("click",function(){
+					$('body,html').animate({scrollTop:0},800);
+					return false;
+				})
+</script>

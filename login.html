@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>寺库-登录</title>
+	<link rel="shortcut icon" href="bitbug_favicon.ico" />
+</head>
+<style>
+		*{
+		margin: 0;
+		padding: 0;
+		}
+	#header{
+		width: 100%;
+		height: 70px;
+		background: rgba(0,0,0,0.8);
+		display: flex;
+		justify-content: space-between;
+	}
+	#header img{
+		margin-left: 75px;
+	}
+	#header a{
+		line-height: 70px;
+		color:#999;
+		text-decoration: none;
+		font-size: 12px;
+		margin-right: 15px;
+	}
+	#header a:hover{
+		color:orange;
+	}
+	#header #headercontent{
+		margin-right: 60px;
+	}
+	#content{
+		background-color: #fdf8f4;
+		width: 100%;
+		height: 600px;
+		position: relative;
+	}
+	#content #img1{
+		margin-left: 100px;
+		margin-top: 50px;
+	}
+	#content #img2{
+		margin-left: 100px;
+		margin-top: 50px;
+	}
+	#content #img3{
+		margin-left: 100px;
+		margin-top: 50px;
+	}
+	#login{
+		width: 270px;
+		height: 370px;
+		background-color: white;
+		position: absolute;
+		left: 800px;
+		top: 70px;
+		padding-top: 30px;
+		padding-left: 30px;
+	}
+	#change{
+		display: flex;
+		justify-content: center;
+	}
+	#change span{
+		margin-left: 50px;
+		cursor: pointer;
+	}
+	#change span:first-child{
+		margin-left: -20px;
+		cursor: pointer;
+	}
+	#txtinput{
+		width: 230px;
+		height: 30px;
+		margin-top: 5px;
+		outline-color: red;
+		font-size: 20px;
+		margin-top: 50px;
+	}
+	input::placeholder{
+		font-size: 13px;
+	}
+	#txtpass{
+		width: 230px;
+		height: 30px;
+		margin-top: 5px;
+		outline-color: red;
+		font-size: 20px;
+		margin-top: 20px;
+	}
+		#sub{
+		color:white;
+		background-color: orange;
+		border:1px solid orange;
+		cursor: pointer;
+		margin-top: 20px;
+	}
+			#mathrandom{
+			width:80px;
+			height:30px;
+			font-size:20px;
+			font-family:Arial; 
+			font-style:italic; 
+			font-weight:bold; 
+			border:0; 
+			letter-spacing:2px; 
+			color:blue; 
+			}
+			#one{
+				height: 200px;	
+			}
+		#one:hover #erweima{
+			transform: scale(0.8) translate(-70px);
+			transition: all 1s;
+		}
+		#loginright{
+			margin-top: -200px;
+			margin-left: 40px;
+		}
+		#pic{
+			margin-top: 10px;
+		}
+		#pic .qq:hover{
+			cursor: pointer;
+			color: orange;
+		}
+		#pic .wx:hover{
+			cursor: pointer;
+			color: orange;
+		}
+</style>
+<body>
+<div id="header">
+		<img src="img/siku.png">
+		<div id="headercontent">
+		<a href="index.html">寺库首页</a>
+		<a href="#">收藏寺库</a>
+		<a href="#">寺库APP</a>
+	</div>
+</div>
+<div id="content">
+	<img id="img1" src="img/bgimg.jpg">
+	<div id="login">
+		<div id="change"><span id="span1" style="font-size: 14px">扫码登录</span><span id="span2" style="font-size: 14px;color: orange">密码登录</span></div>
+		<div id="two">
+			<input id="txtinput" type="text" placeholder="  用户名/手机号/邮箱">
+			<input id="txtpass" type="password" placeholder="  密码"><br/>
+			<span style="font-size: 13px;margin-top: 10px;display: block;">验证码 :</span>
+			<input id="inputtext" type="text" style="width: 90px;height: 40px;font-size: 20px;outline-color: red"><input id="mathrandom" type="button" style="width: 70px;height: 30px;margin-left: 10px"><span id="change1" style="cursor:pointer">换一换</span><br/><div id="content1"></div>
+			<input type="checkbox" style="width: 10px;margin-top: 10px;vertical-align: bottom;"><span style="font-size: 13px;vertical-align: bottom;">记住账号</span><br>
+						<span id="subdown" style="color: red"></span>
+			<input id="sub"  type="button" value="立即登录" style="height: 40px;width:237px"><br/>
+		<span style="margin-top: 10px;display: inline-block;font-size: 14px">还不是寺库会员？</span><a href="reg.html" style="text-decoration: none;color:orange">免费注册</a>
+	</div>
+				<div id="one"><span id="erweima" style="display: none;margin-left: -50px"><img id="img2" src="img/loginma.jpg" style="width: 150px"></span>
+					<span id="loginright" style="display: none"><img id="img3" src="img/loginright.jpg"></span>
+				</div>
+				<div id="last" style="display: none">
+						<span style="font-size: 13px;color: gray;margin-top: 40px;display: block;">使用合作网站账号登录</span>
+						<div id="pic"><img src="img/qq.jpg" style="vertical-align: bottom;"><span class="qq" style="vertical-align: bottom;font-size: 13px">QQ</span> <img src="img/wx.jpg" style="vertical-align: bottom;margin-left: 5px"><span class="wx" style="font-size: 13px">微信</span></div>
+						<span style="font-size: 13px;margin-top: 30px;display: inline-block;">还不是寺库会员？</span><a href="reg.html" style="text-decoration: none;color: orange">免费注册</a>
+					</div>
+					</div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/cookietool.js"></script>
+<script type="text/javascript">
+			$("#span1").click(function(){
+				$("#span1").css({"color":"orange"});
+				$("#span2").css({"color":"black"});
+				$("#two").css({"display":"none"});
+				$("#erweima").css({"display":"block"});
+				$("#last").css({"display":"block"});
+			})
+				$("#span2").click(function(){
+				$("#span1").css({"color":"black"});
+				$("#span2").css({"color":"orange"});
+				$("#two").css({"display":"block"});
+				$("#erweima").css({"display":"none"});
+				$("#last").css({"display":"none"});
+			})
+				$("#one").mouseover(function(){
+					$("#loginright").css({"display":"block"});
+				})
+					$("#one").mouseout(function(){
+					$("#loginright").css({"display":"none"});
+				})
+
+	//验证码
+function change(){
+    code=$("#mathrandom");
+ 
+   var arrays=new Array( 
+       '1','2','3','4','5','6','7','8','9','0',
+       'a','b','c','d','e','f','g','h','i','j', 
+       'k','l','m','n','o','p','q','r','s','t', 
+       'u','v','w','x','y','z', 
+       'A','B','C','D','E','F','G','H','I','J', 
+       'K','L','M','N','O','P','Q','R','S','T', 
+       'U','V','W','X','Y','Z'        
+       ); 
+    codes='';
+   for(var i = 0; i<4; i++){
+
+   var r = parseInt(Math.random()*arrays.length);
+   codes += arrays[r];
+  }
+
+     code.val(codes);
+  }
+  change();
+ code.click(change);
+ $("#change1").click(change);
+  $("#inputtext").blur(function(){
+   var inputCode = $("#inputtext").val().toUpperCase();
+  if(inputCode.length == 0) { 
+   $("#content1").html("请输入验证码！");
+      $("#sub").css({"background-color":"gray","border-color":"gray"});
+      $("#sub").attr("disabled","true");
+  }    
+  else if(inputCode!=codes.toUpperCase()) {
+   $("#content1").html("验证码输入错误!请重新输入");
+   $("#sub").css({"background-color":"gray","border-color":"gray"});
+   $("#sub").attr("disabled","true");
+   change();
+   $("#inputtext").val("");
+   $("#sub").attr("disabled","false");
+  }else { 
+   $("#content1").html("正确");
+     $("#sub").css({"background-color":"orange","border-color":"orange"})
+  } 
+  });
+
+				$("#sub").click(function(){
+
+		$.post("php/sikulogin.php",{userId:$("#txtinput").val(),userPass:$("#txtpass").val()},function(data){
+								if(data=="1"){
+									addCookie("name",$("#txtinput").val(),7);
+									 location.href="index.html";
+								}else{
+									$("#subdown").html("账号或密码错误");
+								}
+						})
+			})
+
+</script>	

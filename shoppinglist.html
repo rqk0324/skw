@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+#header{
+	width: 100%;
+	height: 130px;
+	display: flex;
+}
+.headerLanguage .headerRight{
+	width: 50px;
+	height: 80px;
+	position: relative;
+	left:65px;
+	top:50px;
+}
+.headerLanguage .headerRight .s1{
+	display: block;
+	font-size: 10px;
+	font-weight: 100;
+	position: absolute;
+}
+.headerLanguage .headerRight .s2{
+	width: 0px;
+	height:0px;
+	border:5px solid transparent;
+	border-top-color: black;
+	position: absolute;
+	left: 28px;
+	top: 6px;
+}
+.headerRight .s1:hover{
+	color:red;
+	cursor: pointer;
+}
+.headerRight .s2:hover{
+	border-top-color:red;
+	cursor: pointer;
+}
+.headerLanguage #contentment{
+	position: absolute;
+	left:-30px;
+	top: 25px;
+	width: 70px;
+	height: 60px;
+	z-index:20;
+	border:1px solid black;
+	display: none;
+}
+#contentment .s3{
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	height: 30px;
+}
+#contentment .s3:hover{
+	background-color: #e9e4e4;
+}
+#contentment .s4:hover{
+	background-color: #e9e4e4;
+}
+#contentment .s4{
+	font-size: 9px;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	height: 30px;
+}
+.headerLanguage .line{
+	display: block;
+	margin-top: -35px;
+	margin-left: 120px;
+}
+.headerLanguage .money{
+	font-family: "华文新魏";
+	font-size: 10px;
+	font-weight: 100;
+	margin-left: 150px;
+	margin-top: -23px;
+}
+.headerLanguage .dollor{
+	font-size: 10px;
+	margin-left: 180px;
+	margin-top: -16px;
+	font-weight: 100;
+}
+.logo{
+	padding-left: 400px;
+	width: 190px;
+	height: 80px;
+	margin-top: 30px;
+}
+#rightbox{
+	width: 280px;
+	height: 40px;
+	margin-left: 280px;
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+#rightbox .line2{
+	display: block;
+}
+#rightbox #login{
+	color: black;
+	font-size: 14px;
+	display: block;
+	line-height: 40px;
+}
+#rightbox #reghide:hover{
+	text-decoration: underline;
+}
+#rightbox #login:hover{
+	color:orange;
+	text-decoration: underline;
+}
+#rightbox #reg{
+	color: black;
+	font-size: 14px;
+	display: block;
+	line-height: 40px;
+}
+#rightbox #reg:hover{
+	color:orange;
+	text-decoration: underline;
+}
+#rightbox .icon-icon_Shoppingbag_li{
+	font-size: 30px;
+	color: black;
+	font-weight: 900;
+	display: block;
+	line-height: 40px;
+}
+#rightbox .icon-icon_Shoppingbag_li:hover{
+	color:orange;
+}
+#rightbox .icon-iconshoucang{
+	font-size: 30px;
+	color: black;
+	display: block;
+	line-height: 40px;
+}
+#rightbox .icon-iconshoucang:hover{
+	color:orange;
+}
+#menu{
+	width: 100%;
+	height: 55px;
+	background-color:black;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+#menu .sanjiao{
+	width: 0;
+	height: 0;
+	border:8px solid transparent;
+	border-bottom-color: white;
+	position: absolute;
+	top: 38px;
+	margin-left: 12px;
+	display: none;
+}
+#menu #inputbox{
+	width: 170px;
+	height: 30px;
+	border: 1px solid white;
+	position: absolute;
+	left: 1110px;
+	top: 10px;
+	cursor: text;
+	outline-color: red;
+}
+#menu a{
+	color:#ffb81c;
+	line-height: 55px;
+	margin-left: 15px;
+}
+#menu a:hover{
+	color:white;
+}
+#menu a:hover .sanjiao{
+	display: block;
+}
+#menu a:nth-child(12){
+	padding-right: -45px;
+}
+#menu #search1{
+	padding-right: 30px;
+	margin-top: 20px;
+}
+#menu_bag_list{
+	width: 100%;
+	height: 380px;
+	display: none;
+	z-index: 20;
+	position: absolute;
+	background: skyblue;
+}
+#menu_bag_list a:hover{
+	color: black;
+	text-decoration: underline;
+}
+#menuright{
+	display: flex;
+	flex-direction: column;
+}
+#menuright .fl{
+	margin-top: 40px;
+	font-weight: 900;
+	margin-left: 10px;
+}
+#menuright a{
+	margin-top: 20px;
+	color:black;
+	margin-left: 10px;
+}
+#menuright2{
+	display: flex;
+	flex-direction: column;
+	margin-left: 250px;
+	margin-top: -165px;
+}
+#menuright2 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright3{
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-top: -180px;
+}
+#menuright3 .pp{
+	font-weight: 900;
+}
+#menuright3 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright4{
+	display: flex;
+	flex-direction: column;
+	margin-left: 700px;
+	margin-top:-210px; 
+}
+#menuright4 a{
+	color: black;
+	margin-top:20px; 
+}
+#menuright5{
+	display: flex;
+	flex-direction: column;
+	margin-left: 900px;
+	margin-top: -200px;
+}
+#menuright5 a{
+	color: black;
+	margin-top: 20px;
+}
+#menu_wanbiao_list{
+	width: 100%;
+	height: 420px;
+	display: none;
+	z-index: 20;
+	position: absolute;
+	background: white;
+	background-color: skyblue;
+}
+#menu_wanbiao_list a:hover{
+	color: black;
+	text-decoration: underline;
+}
+#menuright6{
+	display: flex;
+	flex-direction: column;
+}
+#menuright6 .fl{
+	margin-top: 40px;
+	font-weight: 900;
+	margin-left: 10px;
+}
+#menuright6 a{
+	margin-top: 20px;
+	color:black;
+	margin-left: 10px;
+}
+#menuright7{
+	display: flex;
+	flex-direction: column;
+	margin-left: 250px;
+	margin-top: -85px;
+}
+#menuright7 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright8{
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-top: -100px;
+}
+#menuright8 .pp{
+	font-weight: 900;
+}
+#menuright8 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright9{
+	display: flex;
+	flex-direction: column;
+	margin-left: 700px;
+	margin-top:-245px; 
+}
+#menuright9 a{
+	color: black;
+	margin-top:20px; 
+}
+#menuright10{
+	display: flex;
+	flex-direction: column;
+	margin-left: 900px;
+	margin-top: -250px;
+}
+#menuright10 a{
+	color: black;
+	margin-top: 20px;
+}
+#menu_zhubao_list{
+	width: 100%;
+	height: 420px;
+	display: none;
+		z-index: 20;
+	position: absolute;
+	background: skyblue;
+}
+#menu_zhubao_list a:hover{
+	color: black;
+	text-decoration: underline;
+}
+#menuright11{
+	display: flex;
+	flex-direction: column;
+}
+#menuright11 .fl{
+	margin-top: 40px;
+	font-weight: 900;
+	margin-left: 10px;
+}
+#menuright11 a{
+	margin-top: 20px;
+	color:black;
+	margin-left: 10px;
+}
+#menuright12{
+	display: flex;
+	flex-direction: column;
+	margin-left: 250px;
+	margin-top: -240px;
+}
+#menuright12 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright13{
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-top: -230px;
+}
+#menuright13 .pp{
+	font-weight: 900;
+}
+#menuright13 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright14{
+	display: flex;
+	flex-direction: column;
+	margin-left: 700px;
+	margin-top:-170px; 
+}
+#menuright14 a{
+	color: black;
+	margin-top:20px; 
+}
+#menuright15{
+	display: flex;
+	flex-direction: column;
+	margin-left: 900px;
+	margin-top: -170px;
+}
+#menuright15 a{
+	color: black;
+	margin-top: 20px;
+}
+
+#menu_fushi_list{
+	width: 100%;
+	height: 320px;
+	display: none;
+		z-index: 20;
+	position: absolute;
+	background: skyblue;
+}
+#menu_fushi_list a:hover{
+	color: black;
+	text-decoration: underline;
+}
+#menuright16{
+	display: flex;
+	flex-direction: column;
+}
+#menuright16 .fl{
+	margin-top: 40px;
+	font-weight: 900;
+	margin-left: 10px;
+}
+#menuright16 a{
+	margin-top: 20px;
+	color:black;
+	margin-left: 10px;
+}
+#menuright17{
+	display: flex;
+	flex-direction: column;
+	margin-left: 250px;
+	margin-top: -170px;
+}
+#menuright17 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright18{
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-top: -190px;
+}
+#menuright18 .pp{
+	font-weight: 900;
+}
+#menuright18 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright19{
+	display: flex;
+	flex-direction: column;
+	margin-left: 700px;
+	margin-top:-170px; 
+}
+#menuright19 a{
+	color: black;
+	margin-top:20px; 
+}
+#menuright20{
+	display: flex;
+	flex-direction: column;
+	margin-left: 900px;
+	margin-top: -120px;
+}
+#menuright20 a{
+	color: black;
+	margin-top: 20px;
+}
+#menu_shoe_list{
+	width: 100%;
+	height: 370px;
+	display: none;
+		z-index: 20;
+	position: absolute;
+	background: skyblue;
+}
+#menu_shoe_list a:hover{
+	color: black;
+	text-decoration: underline;
+}
+#menuright21{
+	display: flex;
+	flex-direction: column;
+}
+#menuright21 .fl{
+	margin-top: 40px;
+	font-weight: 900;
+	margin-left: 10px;
+}
+#menuright21 a{
+	margin-top: 20px;
+	color:black;
+	margin-left: 10px;
+}
+#menuright22{
+	display: flex;
+	flex-direction: column;
+	margin-left: 250px;
+	margin-top: -170px;
+}
+#menuright22 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright23{
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-top: -190px;
+}
+#menuright23 .pp{
+	font-weight: 900;
+}
+#menuright23 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright24{
+	display: flex;
+	flex-direction: column;
+	margin-left: 700px;
+	margin-top:-200px; 
+}
+#menuright24 a{
+	color: black;
+	margin-top:20px; 
+}
+#menuright25{
+	display: flex;
+	flex-direction: column;
+	margin-left: 900px;
+	margin-top: -170px;
+}
+#menuright25 a{
+	color: black;
+	margin-top: 20px;
+}
+#menu_peishi_list{
+	width: 100%;
+	height: 420px;
+	display: none;
+		z-index: 20;
+	position: absolute;
+	background: skyblue;
+}
+#menu_peishi_list a:hover{
+	color: black;
+	text-decoration: underline;
+}
+#menuright26{
+	display: flex;
+	flex-direction: column;
+}
+#menuright26 .fl{
+	margin-top: 40px;
+	font-weight: 900;
+	margin-left: 10px;
+}
+#menuright26 a{
+	margin-top: 20px;
+	color:black;
+	margin-left: 10px;
+}
+#menuright27{
+	display: flex;
+	flex-direction: column;
+	margin-left: 250px;
+	margin-top: -245px;
+}
+#menuright27 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright28{
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-top: -270px;
+}
+#menuright28 .pp{
+	font-weight: 900;
+}
+#menuright28 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright29{
+	display: flex;
+	flex-direction: column;
+	margin-left: 700px;
+	margin-top:-160px; 
+}
+#menuright29 a{
+	color: black;
+	margin-top:20px; 
+}
+#menuright30{
+	display: flex;
+	flex-direction: column;
+	margin-left: 900px;
+	margin-top: -170px;
+}
+#menuright30 a{
+	color: black;
+	margin-top: 20px;
+}
+#menu_sport_list{
+	width: 100%;
+	height: 320px;
+	display: none;
+		z-index: 20;
+	position: absolute;
+	background: skyblue;
+
+}
+#menu_sport_list a:hover{
+	color: black;
+	text-decoration: underline;
+}
+#menuright31{
+	display: flex;
+	flex-direction: column;
+}
+#menuright31 .fl{
+	margin-top: 40px;
+	font-weight: 900;
+	margin-left: 10px;
+}
+#menuright31 a{
+	margin-top: 20px;
+	color:black;
+	margin-left: 10px;
+}
+#menuright32{
+	display: flex;
+	flex-direction: column;
+	margin-left: 250px;
+	margin-top: -130px;
+}
+#menuright32 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright33{
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-top: -150px;
+}
+#menuright33 .pp{
+	font-weight: 900;
+}
+#menuright33 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright34{
+	display: flex;
+	flex-direction: column;
+	margin-left: 700px;
+	margin-top:-170px; 
+}
+#menuright34 a{
+	color: black;
+	margin-top:20px; 
+}
+#menuright35{
+	display: flex;
+	flex-direction: column;
+	margin-left: 900px;
+	margin-top: -170px;
+}
+#menuright35 a{
+	color: black;
+	margin-top: 20px;
+}
+#menu_home_list{
+	width: 100%;
+	height: 280px;
+	display: none;
+		z-index: 20;
+	position: absolute;
+	background: skyblue;
+}
+#menu_home_list a:hover{
+	color: black;
+	text-decoration: underline;
+}
+#menuright36{
+	display: flex;
+	flex-direction: column;
+}
+#menuright36 .fl{
+	margin-top: 40px;
+	font-weight: 900;
+	margin-left: 10px;
+}
+#menuright36 a{
+	margin-top: 20px;
+	color:black;
+	margin-left: 10px;
+}
+#menuright37{
+	display: flex;
+	flex-direction: column;
+	margin-left: 250px;
+	margin-top: -120px;
+}
+#menuright37 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright38{
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-top: -145px;
+}
+#menuright38 .pp{
+	font-weight: 900;
+}
+#menuright38 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright39{
+	display: flex;
+	flex-direction: column;
+	margin-left: 700px;
+	margin-top:-130px; 
+}
+#menuright39 a{
+	color: black;
+	margin-top:20px; 
+}
+#menuright40{
+	display: flex;
+	flex-direction: column;
+	margin-left: 900px;
+	margin-top: -120px;
+}
+#menuright40 a{
+	color: black;
+	margin-top: 20px;
+}
+#menu_makeup_list{
+	width: 100%;
+	height: 280px;
+	display: none;
+		z-index: 20;
+	position: absolute;
+	background: skyblue;
+}
+#menu_makeup_list a:hover{
+	color: black;
+	text-decoration: underline;
+}
+#menuright41{
+	display: flex;
+	flex-direction: column;
+}
+#menuright41 .fl{
+	margin-top: 40px;
+	font-weight: 900;
+	margin-left: 10px;
+}
+#menuright41 a{
+	margin-top: 20px;
+	color:black;
+	margin-left: 10px;
+}
+#menuright42{
+	display: flex;
+	flex-direction: column;
+	margin-left: 250px;
+	margin-top: -160px;
+}
+#menuright42 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright43{
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-top: -140px;
+}
+#menuright43 .pp{
+	font-weight: 900;
+}
+#menuright43 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright44{
+	display: flex;
+	flex-direction: column;
+	margin-left: 700px;
+	margin-top:-125px; 
+}
+#menuright44 a{
+	color: black;
+	margin-top:20px; 
+}
+#menuright45{
+	display: flex;
+	flex-direction: column;
+	margin-left: 900px;
+	margin-top: -120px;
+}
+#menuright45 a{
+	color: black;
+	margin-top: 20px;
+}
+#menu_live_list{
+	width: 100%;
+	height: 280px;
+	display: none;
+	z-index: 20;
+	position: absolute;
+	background: skyblue;
+}
+#menu_live_list a:hover{
+	color: black;
+	text-decoration: underline;
+}
+#menuright46{
+	display: flex;
+	flex-direction: column;
+}
+#menuright46 .fl{
+	margin-top: 40px;
+	font-weight: 900;
+	margin-left: 10px;
+}
+#menuright46 a{
+	margin-top: 20px;
+	color:black;
+	margin-left: 10px;
+}
+#menuright47{
+	display: flex;
+	flex-direction: column;
+	margin-left: 250px;
+	margin-top: -90px;
+}
+#menuright47 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright48{
+	display: flex;
+	flex-direction: column;
+	margin-left: 500px;
+	margin-top: -90px;
+}
+#menuright48 .pp{
+	font-weight: 900;
+}
+#menuright48 a{
+	margin-top: 20px;
+	color:black;
+}
+#menuright49{
+	display: flex;
+	flex-direction: column;
+	margin-left: 700px;
+	margin-top:-50px; 
+}
+#menuright49 a{
+	color: black;
+	margin-top:20px; 
+}
+#menuright50{
+	display: flex;
+	flex-direction: column;
+	margin-left: 900px;
+	margin-top: -50px;
+}
+#menuright50 a{
+	color: black;
+	margin-top: 20px;
+}
+#bottombig{
+	width: 100%;
+	height: 2200px;
+	background-color: #ededed;
+}
+#shopcenter{
+	width: 1210px;
+	height: 2000px;
+	margin: 0 auto;
+	background-color: white;
+}
+.box{
+	width:240px;
+	height: 417px;
+	float: left;
+	margin: 30px;
+}
+.box:hover{
+	border:1px solid #dedcdc;
+}
+.box .img{
+	width: 240px;
+	height: 240px;
+	cursor: pointer;
+}
+.box .bt1{
+	display: flex;
+	width: 240px;
+	border-bottom:1px solid #debebe;
+	padding-bottom: 7px;
+}
+.bt1 .ziying{
+	width:35px;
+	height:20px;
+	background-color:black;
+	color: white;
+	text-align: center;
+	line-height: 20px;
+	font-size: 13px;
+	margin-top: 20px;
+}
+.bt1 .new{
+	width:35px;
+	height:20px;
+	background-color:red;
+	color:white;
+	line-height:20px;
+	text-align:center;
+	margin-left: 5px;
+	font-size:13px;
+	margin-top: 20px;
+}
+.box .heart{
+	font-size: 12px;
+	color: #666;
+	float: right;
+	margin-top:-17px;
+	display: none;
+}
+.box .addcart{
+	background-color: red;
+	border:1px solid red;
+	color:white;
+	cursor: pointer;
+	margin-top: 10px;
+	display: none;
+}
+</style>
+<body>
+<div id="header">
+	<div class="headerLanguage">
+		<div class="headerRight">
+			<span class="s1">中文</span>
+			<span class="s2"></span>
+			<div id="contentment">
+				<span class="s3">EN</span>
+				<span class="s4">中文</span>
+			</div>
+		</div>
+		<span class="line"><img src="img/line.jpg"></span>
+		<h1 class="money">RMB</h1>
+		<h1 class="dollor">￥</h1>
+	</div>
+	<div class="logo">
+			<a href="index.html"><img src="img/logo.jpg"></a>
+	</div>
+	<div id="rightbox">
+		<a id="login" href="login.html">登录</a>
+		<span id="loginhide" style="display: none"></span>
+		<img class="line2" src="img/line.jpg">
+		<a id="reg" href="reg.html">注册</a>
+		<span id="reghide" style="display: none;margin-top:8px;cursor: pointer;">退出</span>
+		<img class="line2" src="img/line.jpg">
+		<a href="#" title="购物车"><span class="iconfont icon-icon_Shoppingbag_li"></span></a>
+		<img class="line2" src="img/line.jpg">
+		<a href="#" title="收藏"><span class="iconfont icon-iconshoucang"></span></a>
+	</div>
+</div>
+<!-- 菜单栏 -->
+<div id="bigbox10">
+<div id="bigbox9">
+<div id="bigbox8">
+<div id="bigbox7">
+<div id="bigbox6">
+<div id="bigbox5">
+<div id="bigbox4">
+<div id="bigbox3">
+<div id="bigbox2">
+<div id="bigbox">
+<div id="menu">
+	<a id="home" href="index.html">首页</a>
+	<a id="menu_bag" href="#">包袋<span class="sanjiao"></span></a>
+	<a id="menu_wanbiao"  href="#">腕表<span class="sanjiao"></span></a>
+	<a id="menu_zhubao" href="#">珠宝首饰<span class="sanjiao"></span></a>
+	<a id="menu_fushi" href="#">服饰<span class="sanjiao"></span></a>
+	<a id="menu_shoe" href="#">鞋履<span class="sanjiao"></span></a>
+	<a id="menu_peishi" href="#">配饰<span class="sanjiao"></span></a>
+	<a id="menu_sport" href="#">运动<span class="sanjiao"></span></a>
+	<a id="menu_home" href="#">家居<span class="sanjiao"></span></a>
+	<a id="menu_makeup" href="#">美妆<span class="sanjiao"></span></a>
+	<a id="menu_live" href="#" >生活方式<span class="sanjiao"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#"><img id="search1" src="img/search.jpg"></a>
+	<input id="inputbox" type="text" placeholder="搜索商品、品牌">
+</div>
+<div id="menu_bag_list">
+		<div id="menuright">
+			<span class="fl">分类</span>
+			<a href="#">男士包袋</a>
+			<a href="#">钱包</a>
+			<a href="#">斜挎包</a>
+			<a href="#">双肩包</a>
+	</div>
+	<div id="menuright2">
+			<a href="#">女士包袋</a>
+			<a href="#">手拿包</a>
+			<a href="#">拉杆箱</a>
+			<a href="#">手提包</a>
+	</div>
+		<div id="menuright3">
+			<span class="pp">品牌</span>
+			<a href="#">爱马仕</a>
+			<a href="#">路易威登</a>
+			<a href="#">宝格丽</a>
+			<a href="#">范思哲</a>
+			<a href="#">缪缪</a>
+	</div>
+			<div id="menuright4">
+			<a href="#">香奈儿</a>
+			<a href="#">古驰</a>
+			<a href="#">蔻驰</a>
+			<a href="#">杜嘉班纳</a>
+			<a href="#">亚历山大麦昆</a>
+			</div>
+				<div id="menuright5">
+			<a href="#">迪奥</a>
+			<a href="#">圣罗兰</a>
+			<a href="#">葆蝶家</a>
+			<a href="#">克洛伊</a>
+				</div>
+</div>
+</div>
+<div id="menu_wanbiao_list">
+		
+	<div id="menuright6">
+			<span class="fl">分类</span>
+			<a href="#">男士</a>
+			<a href="#">机械腕表</a>
+	</div>
+	<div id="menuright7">
+			<a href="#">女士</a>
+			<a href="#">石英腕表</a>
+	</div>
+		<div id="menuright8">
+			<span class="pp">品牌</span>
+			<a href="#">百达翠丽</a>
+			<a href="#">宝玑</a>
+			<a href="#">芝柏</a>
+			<a href="#">沛纳海</a>
+			<a href="#">真力时</a>
+			<a href="#">浪琴</a>
+	</div>
+			<div id="menuright9">
+			<a href="#">江诗丹顿</a>
+			<a href="#">浪哥</a>
+			<a href="#">萧邦</a>
+			<a href="#">格拉苏蒂</a>
+			<a href="#">卡地亚</a>
+			<a href="#">天梭</a>
+			</div>
+				<div id="menuright10">
+			<a href="#">宝柏</a>
+			<a href="#">积家</a>
+			<a href="#">万国</a>
+			<a href="#">劳力士</a>
+			<a href="#">欧米茄</a>
+			<a href="#">汉密尔顿</a>
+				</div>
+</div>
+</div>
+<div id="menu_zhubao_list">
+		
+	<div id="menuright11">
+			<span class="fl">分类</span>
+			<a href="#">项链</a>
+			<a href="#">手链</a>
+			<a href="#">手镯</a>
+			<a href="#">手串</a>
+			<a href="#">首饰套装</a>
+			<a href="#">头饰</a>
+	</div>
+	<div id="menuright12">
+			<a href="#">吊坠</a>
+			<a href="#">耳饰</a>
+			<a href="#">戒指/指环</a>
+			<a href="#">串珠配珠</a>
+			<a href="#">胸针</a>
+	</div>
+		<div id="menuright13">
+			<span class="pp">品牌</span>
+			<a href="#">梵克雅宝</a>
+			<a href="#">迪奥</a>
+			<a href="#">爱马仕</a>
+			<a href="#">路易威登</a>
+	</div>
+			<div id="menuright14">
+			<a href="#">尚美</a>
+			<a href="#">宝格丽</a>
+			<a href="#">潘多拉</a>
+			<a href="#">Apm Monaco</a>
+			</div>
+				<div id="menuright15">
+			<a href="#">蒂芙尼</a>
+			<a href="#">施华洛世奇</a>
+			<a href="#">香奈儿</a>
+			<a href="#">莫妮卡魏娜德</a>
+				</div>
+</div>
+</div>
+<div id="menu_fushi_list">
+		
+	<div id="menuright16">
+			<span class="fl">分类</span>
+			<a href="#">男装</a>
+			<a href="#">男士卫衣</a>
+			<a href="#">男式衬衫</a>
+			<a href="#">女式连衣裙</a>
+	</div>
+	<div id="menuright17">
+			<a href="#">女装</a>
+			<a href="#">男士裤装</a>
+			<a href="#">男士夹克</a>
+			<a href="#">女式外套</a>
+	</div>
+		<div id="menuright18">
+			<span class="pp">品牌</span>
+			<a href="#">博柏利</a>
+			<a href="#">MaxMara</a>
+			<a href="#">纪梵希</a>
+			<a href="#">丝黛拉麦卡妮</a>
+	</div>
+			<div id="menuright19">
+			<a href="#">Emporio Armain</a>
+			<a href="#">杜嘉班纳</a>
+			<a href="#">圣罗兰</a>
+			</div>
+				<div id="menuright20">
+			<a href="#">范思哲</a>
+			<a href="#">PRADA</a>
+			<a href="#">华伦天奴</a>
+				</div>
+</div>
+</div>
+<div id="menu_shoe_list">
+		<div id="menuright21">
+			<span class="fl">分类</span>
+			<a href="#">平底鞋</a>
+			<a href="#">皮鞋</a>
+			<a href="#">高跟鞋</a>
+			<a href="#">运动鞋</a>
+	</div>
+	<div id="menuright22">
+			<a href="#">靴子</a>
+			<a href="#">拖鞋</a>
+			<a href="#">凉鞋</a>
+			<a href="#">乐福鞋</a>
+	</div>
+		<div id="menuright23">
+			<span class="pp">品牌</span>
+			<a href="#">古驰</a>
+			<a href="#">马诺洛 伯拉尼克</a>
+			<a href="#">华伦天奴</a>
+			<a href="#">Golden Goose</a>
+			<a href="#">Hogan</a>
+	</div>
+			<div id="menuright24">
+			<a href="#">巴黎世家</a>
+			<a href="#">菲拉格慕</a>
+			<a href="#">斯图尔特 韦茨曼</a>
+			<a href="#">Roger Vivier</a>
+			</div>
+				<div id="menuright25">
+			<a href="#">Jimmy Choo</a>
+			<a href="#">博柏利</a>
+			<a href="#">塞乔 罗西</a>
+			<a href="#">Tod's</a>
+				</div>
+</div>
+</div>
+<div id="menu_peishi_list">
+		<div id="menuright26">
+			<span class="fl">分类</span>
+			<a href="#">墨镜</a>
+			<a href="#">腰带</a>
+			<a href="#">丝巾</a>
+			<a href="#">挂饰</a>
+			<a href="#">手套</a>
+			<a href="#">袖扣</a>
+	</div>
+	<div id="menuright27">
+			<a href="#">眼镜框</a>
+			<a href="#">围巾</a>
+			<a href="#">雨伞</a>
+			<a href="#">帽子</a>
+			<a href="#">钥匙扣</a>
+			<a href="#">领结</a>
+	</div>
+		<div id="menuright28">
+			<span class="pp">品牌</span>
+			<a href="#">爱马仕</a>
+			<a href="#">苏拉格慕</a>
+			<a href="#">万宝龙</a>
+			<a href="#">巴利</a>
+	</div>
+			<div id="menuright29">
+			<a href="#">路易威登</a>
+			<a href="#">范思哲</a>
+			<a href="#">雷朋</a>
+			<a href="#">缪缪</a>
+			</div>
+				<div id="menuright30">
+			<a href="#">古驰</a>
+			<a href="#">博柏利</a>
+			<a href="#">普拉达</a>
+			<a href="#">葆蝶家</a>
+				</div>
+</div>
+</div>
+<div id="menu_sport_list">
+		<div id="menuright31">
+			<span class="fl">分类</span>
+			<a href="#">跑步鞋</a>
+			<a href="#">背包</a>
+			<a href="#">骑行装备</a>
+	</div>
+	<div id="menuright32">
+			<a href="#">运动服</a>
+			<a href="#">健身装备</a>
+			<a href="#">泳装</a>
+	</div>
+		<div id="menuright33">
+			<span class="pp">品牌</span>
+			<a href="#">阿迪达斯</a>
+			<a href="#">彪马</a>
+			<a href="#">始祖鸟</a>
+			<a href="#">安德玛</a>
+	</div>
+			<div id="menuright34">
+			<a href="#">耐克</a>
+			<a href="#">Supreme</a>
+			<a href="#">Marmot</a>
+			<a href="#">Superga</a>
+			</div>
+				<div id="menuright35">
+			<a href="#">Y-3</a>
+			<a href="#">Hotsuit</a>
+			<a href="#">鬼冢虎</a>
+			<a href="#">亚瑟士</a>
+				</div>
+</div>
+</div>
+<div id="menu_home_list">
+		<div id="menuright36">
+			<span class="fl">分类</span>
+			<a href="#">饰品摆件</a>
+			<a href="#">家具</a>
+			<a href="#">手机</a>
+	</div>
+	<div id="menuright37">
+			<a href="#">生活电器</a>
+			<a href="#">智能科技</a>
+			<a href="#">音影娱乐</a>
+	</div>
+		<div id="menuright38">
+			<span class="pp">品牌</span>
+			<a href="#">Zippo</a>
+			<a href="#">玛戈隆特</a>
+			<a href="#">微软</a>
+	</div>
+			<div id="menuright39">
+			<a href="#">都彭</a>
+			<a href="#">三星</a>
+			<a href="#">华为</a>
+			</div>
+				<div id="menuright40">
+			<a href="#">菲仕乐</a>
+			<a href="#">魔声</a>
+				</div>
+</div>
+</div>
+<div id="menu_makeup_list">
+		<div id="menuright41">
+			<span class="fl">分类</span>
+			<a href="#">面部护理</a>
+			<a href="#">身体护理</a>
+			<a href="#">香水</a>
+			<a href="#">唇部彩唇</a>
+	</div>
+	<div id="menuright42">
+			<a href="#">眼部护理</a>
+			<a href="#">美容健康</a>
+			<a href="#">面部彩妆</a>
+	</div>
+		<div id="menuright43">
+			<span class="pp">品牌</span>
+			<a href="#">海蓝之谜</a>
+			<a href="#">迪奥</a>
+			<a href="#">YSL</a>
+	</div>
+			<div id="menuright44">
+			<a href="#">SK-II</a>
+			<a href="#">兰蔻</a>
+			<a href="#">Tom Ford</a>
+			</div>
+				<div id="menuright45">
+			<a href="#">香奈儿</a>
+			<a href="#">雅诗兰黛</a>
+				</div>
+</div>
+</div>
+<div id="menu_live_list">
+		<div id="menuright46">
+			<span class="fl">分类</span>
+			<a href="#">豪车租赁</a>
+			<a href="#">旅行</a>
+	</div>
+	<div id="menuright47">
+			<a href="#">飞机 游艇</a>
+			<a href="#">美容与健康</a>
+	</div>
+		<div id="menuright48">
+			<span class="pp">品牌</span>
+			<a href="#">奥迪</a>
+	</div>
+			<div id="menuright49">
+			<a href="#">OXYGYM</a>
+			</div>
+				<div id="menuright50">
+			<a href="#">青岛乘风破浪帆船俱乐部</a>
+				</div>
+</div>
+</div>
+<div id="bottombig">
+	<div style="color:gray;font-size: 13px;margin-left: 100px;padding-top: 50px;margin-bottom: 20px">全部 &nbsp;&nbsp;> &nbsp;&nbsp;包袋 ∨</div>
+	<div id="shopcenter">
+							<!-- <div class="box">
+								<div class="img"><img src="img/shop1.jpg" title="【19春夏新款】GUCCI/古驰条纹饰牛皮革材质男士黑色钱包图片">
+								</div>
+										<div class="bt1">
+									<div class="ziying">自营</div><div class="new">NEW</div>
+										</div>
+										<span style="font-size: 12px;color: #666">【19春夏新款】GUCCI/古驰条纹饰牛皮革材质男士黑色钱包图片</span><br/>
+										<span style="font-weight: bold;">￥4182</span>
+											<div class="hide">
+										<button class="addcart">加入购物车</button>
+										<span class="heart"><img src="img/heart.jpg">收藏</span>
+											</div>
+							</div> -->
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(".s2").click(function(){
+				$("#contentment").css({"display":"block"});
+			})
+			$(".headerRight").mouseleave(function(){
+				$("#contentment").css({"display":"none"});
+			})
+
+				$("#contentment").css({"display":"none"});
+			   $("#contentment").on("click","span",function(event){
+			   	$("#contentment").css({"display":"none"});
+                 var target = $(event.target);
+              	$(".s1").html(target.html())
+			})
+			 // 下拉菜单列表
+			$("#home").mouseenter(function(){
+					$("#menu_bag_list").slideUp(10);
+			})
+
+		$("#menu_bag").mouseenter(function(){
+				$("#menu_bag_list").slideDown(10);
+				$("#menu_wanbiao_list").slideUp(10);
+				$("#menu_zhubao_list").slideUp(10);
+				$("#menu_fushi_list").slideUp(10);
+				$("#menu_shoe_list").slideUp(10);
+				$("#menu_peishi_list").slideUp(10);
+				$("#menu_sport_list").slideUp(10);
+				$("#menu_home_list").slideUp(10);
+				$("#menu_makeup_list").slideUp(10);
+				$("#menu_live_list").slideUp(10);
+		})
+
+		$("#bigbox").mouseleave(function(){
+				$("#menu_bag_list").slideUp(10);
+		})
+
+		$("#menu_wanbiao").mouseenter(function(){
+				$("#menu_wanbiao_list").slideDown(10);
+				$("#menu_zhubao_list").slideUp(10);
+				$("#menu_fushi_list").slideUp(10);
+				$("#menu_shoe_list").slideUp(10);
+				$("#menu_peishi_list").slideUp(10);
+				$("#menu_sport_list").slideUp(10);
+				$("#menu_home_list").slideUp(10);
+				$("#menu_makeup_list").slideUp(10);
+				$("#menu_live_list").slideUp(10);
+				$("#menu_bag_list").slideUp(10);
+		})
+
+		$("#bigbox2").mouseleave(function(){
+				$("#menu_wanbiao_list").slideUp(10);
+		})
+		$("#menu_zhubao").mouseenter(function(){
+			$("#menu_zhubao_list").slideDown(10);
+				$("#menu_wanbiao_list").slideUp(10);
+				$("#menu_fushi_list").slideUp(10);
+				$("#menu_shoe_list").slideUp(10);
+				$("#menu_peishi_list").slideUp(10);
+				$("#menu_sport_list").slideUp(10);
+				$("#menu_home_list").slideUp(10);
+				$("#menu_makeup_list").slideUp(10);
+				$("#menu_live_list").slideUp(10);
+				$("#menu_bag_list").slideUp(10);
+		})
+				$("#bigbox3").mouseleave(function(){
+				$("#menu_zhubao_list").slideUp(10);
+		})
+
+				$("#menu_fushi").mouseenter(function(){
+			$("#menu_fushi_list").slideDown(10);
+				$("#menu_wanbiao_list").slideUp(10);
+				$("#menu_zhubao_list").slideUp(10);
+				$("#menu_shoe_list").slideUp(10);
+				$("#menu_peishi_list").slideUp(10);
+				$("#menu_sport_list").slideUp(10);
+				$("#menu_home_list").slideUp(10);
+				$("#menu_makeup_list").slideUp(10);
+				$("#menu_live_list").slideUp(10);
+				$("#menu_bag_list").slideUp(10);
+		})
+				$("#bigbox4").mouseleave(function(){
+				$("#menu_fushi_list").slideUp(10);
+
+		})	
+
+
+				$("#menu_shoe").mouseenter(function(){
+			$("#menu_shoe_list").slideDown(10);
+				$("#menu_wanbiao_list").slideUp(10);
+				$("#menu_zhubao_list").slideUp(10);
+				$("#menu_fushi_list").slideUp(10);
+				$("#menu_peishi_list").slideUp(10);
+				$("#menu_sport_list").slideUp(10);
+				$("#menu_home_list").slideUp(10);
+				$("#menu_makeup_list").slideUp(10);
+				$("#menu_live_list").slideUp(10);
+				$("#menu_bag_list").slideUp(10);
+		})
+				$("#bigbox5").mouseleave(function(){
+				$("#menu_shoe_list").slideUp(10);
+		})	
+
+
+						$("#menu_peishi").mouseenter(function(){
+			$("#menu_peishi_list").slideDown(10);
+				$("#menu_wanbiao_list").slideUp(10);
+				$("#menu_zhubao_list").slideUp(10);
+				$("#menu_fushi_list").slideUp(10);
+				$("#menu_shoe_list").slideUp(10);
+				$("#menu_sport_list").slideUp(10);
+				$("#menu_home_list").slideUp(10);
+				$("#menu_makeup_list").slideUp(10);
+				$("#menu_live_list").slideUp(10);
+				$("#menu_bag_list").slideUp(10);
+		})
+				$("#bigbox6").mouseleave(function(){
+				$("#menu_peishi_list").slideUp(10);
+		})		
+
+
+
+
+						$("#menu_sport").mouseenter(function(){
+			$("#menu_sport_list").slideDown(10);
+				$("#menu_wanbiao_list").slideUp(10);
+				$("#menu_zhubao_list").slideUp(10);
+				$("#menu_fushi_list").slideUp(10);
+				$("#menu_shoe_list").slideUp(10);
+				$("#menu_peishi_list").slideUp(10);
+				$("#menu_home_list").slideUp(10);
+				$("#menu_makeup_list").slideUp(10);
+				$("#menu_live_list").slideUp(10);
+				$("#menu_bag_list").slideUp(10);
+		})
+				$("#bigbox7").mouseleave(function(){
+				$("#menu_sport_list").slideUp(10);
+		})		
+
+
+										$("#menu_home").mouseenter(function(){
+			$("#menu_home_list").slideDown(10);
+				$("#menu_wanbiao_list").slideUp(10);
+				$("#menu_zhubao_list").slideUp(10);
+				$("#menu_fushi_list").slideUp(10);
+				$("#menu_shoe_list").slideUp(10);
+				$("#menu_peishi_list").slideUp(10);
+				$("#menu_sport_list").slideUp(10);
+				$("#menu_makeup_list").slideUp(10);
+				$("#menu_live_list").slideUp(10);
+				$("#menu_bag_list").slideUp(10);
+		})
+				$("#bigbox8").mouseleave(function(){
+				$("#menu_home_list").slideUp(10);
+		})	
+
+
+
+										$("#menu_makeup").mouseenter(function(){
+			$("#menu_makeup_list").slideDown(10);
+				$("#menu_wanbiao_list").slideUp(10);
+				$("#menu_zhubao_list").slideUp(10);
+				$("#menu_fushi_list").slideUp(10);
+				$("#menu_shoe_list").slideUp(10);
+				$("#menu_peishi_list").slideUp(10);
+				$("#menu_sport_list").slideUp(10);
+				$("#menu_home_list").slideUp(10);
+				$("#menu_live_list").slideUp(10);
+				$("#menu_bag_list").slideUp(10);
+		})
+				$("#bigbox9").mouseleave(function(){
+				$("#menu_makeup_list").slideUp(10);
+		})
+
+
+
+
+								$("#menu_live").mouseenter(function(){
+			$("#menu_live_list").slideDown(10);
+				$("#menu_wanbiao_list").slideUp(10);
+				$("#menu_zhubao_list").slideUp(10);
+				$("#menu_fushi_list").slideUp(10);
+				$("#menu_shoe_list").slideUp(10);
+				$("#menu_peishi_list").slideUp(10);
+				$("#menu_sport_list").slideUp(10);
+				$("#menu_home_list").slideUp(10);
+				$("#menu_makeup_list").slideUp(10);
+				$("#menu_bag_list").slideUp(10);
+		})
+				$("#bigbox10").mouseleave(function(){
+				$("#menu_live_list").slideUp(10);
+		})	
+
+
+
+				//商品列表
+			$(function(){
+				$(".box").mouseover(function(){
+				$(".addcart").css({"display":"block"});
+				$(".heart").css({"display":"block"});
+				})
+				$(".box").mouseout(function(){
+				$(".addcart").css({"display":"none"});
+				$(".heart").css({"display":"none"});
+				})
+			})
+
+
+
+						$(function(){
+							$.get("php/getGoodsList.php",function(data){
+								let str="";
+								for(let i in data){
+									str+=`<div class="box">
+								<div class="img"><img src="${data[i].goodsImg}" title="${data[i].goodsDesc}">
+								</div>
+										<div class="bt1">
+									<div class="ziying">自营</div><div class="new">NEW</div>
+										</div>
+										<span style="font-size: 12px;color: #666">${data[i].beiyong1}</span><br/>
+										<span style="font-weight: bold;">￥${data[i].goodsPrice}</span>
+											<div class="hide">
+										<button class="addcart">加入购物车</button>
+										<span class="heart"><img src="img/heart.jpg">收藏</span>
+											</div>
+							</div>`
+								}
+								$("#shopcenter").append(str);
+							},"json");
+							
+						})				
+</script>
